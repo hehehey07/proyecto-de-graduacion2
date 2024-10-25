@@ -1,0 +1,75 @@
+<!-- authapp/templates/authapp/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    {% load static %}  <!-- Cargar la biblioteca estática -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />  <!-- Ajustar la ruta del CSS -->
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Crear una Cuenta</h1>
+                <div class="social-icons">
+                   <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com/blessingvariedades3" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-x"></i></a> <!-- Icono de X -->
+                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a> <!-- Icono de Instagram -->
+                </div>
+                <span>Llena con tus datos.</span>
+                <input type="text" placeholder="Nombre" />
+                <input type="email" placeholder="Correo Electrónico" />
+                <input type="password" placeholder="Contraseña" />
+                <button>Registrarse</button>
+            </form>
+        </div>
+        
+        <div class="form-container sign-in">
+            
+            <form>
+                
+                <h1>Inicio de Sesión</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com/blessingvariedades3" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-x"></i></a> <!-- Icono de X -->
+                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a> <!-- Icono de Instagram -->
+                    
+                </div>
+                <span>Coloca el Usuario y Contraseña Registrados</span>
+                <input type="text" placeholder="Nombre de Usuario" />
+                <input type="password" placeholder="Contraseña" />
+                <a href="#">Olvidaste tu Contraseña?</a>
+                <button>Iniciar Sesión</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido!</h1>
+                    <p>Coloca todos tus datos y crea una cuenta!</p>
+                    <button class="hidden" id="login">Iniciar Sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¡Hola!</h1>
+                    <p>Dale click! Y registrate con tus datos.</p>
+                    <button class="hidden" id="register">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>  <!-- Ajustar la ruta del JS -->
+    <a href="/" class="back-button">Seguir Comprando</a>
+
+</body>
+</html>
